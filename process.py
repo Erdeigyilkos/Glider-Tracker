@@ -2,8 +2,6 @@ import os
 import sys
 from pathlib import Path
 
-
-
 Path(sys.argv[1]).mkdir(parents=True, exist_ok=True)
 
 
@@ -26,7 +24,8 @@ for line in inread:
     
     
     record = line.split(";")
-    out.write('<trkpt lon="'+ record[1] + '" lat="'+ record[0] + '">\n')
+     
+    out.write('<trkpt lon="'+ str(float(record[1])/1000) + '" lat="'+ str(float(record[0])/1000) + '">\n')
     out.write(' <time>2022-01-01T' + record[5][:-1] + 'Z</time> \n')
     out.write(' <ele>' + record[2] +  '</ele> \n')
     out.write(' <speed>' + record[3] +  '</speed> \n')   

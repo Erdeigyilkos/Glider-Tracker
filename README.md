@@ -19,6 +19,10 @@ Arduino Nano (ATmega328P)
 | VCC       | +5V       |
 | GND       | GND       |
 
+| DISPLAY   | ARDUINO   | 
+| :---      |     :---: |
+| SCL       | A5        |
+| SDA       | A4        |
 
 #Data Converting
     python3 process.py FILENAME
